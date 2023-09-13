@@ -26,15 +26,15 @@ createApp({
             toDoList: [
                 {
                     text: 'Fare la spesa',
-                    todo: true
+                    done: true
                 },
                 {
                     text: 'Lavare la macchina',
-                    todo: false
+                    done: false
                 },
                 {
                     text: 'Andare dal barbiere',
-                    todo: true
+                    done: true
                 },
             ],
             errorMessage: ''
@@ -44,7 +44,7 @@ createApp({
         addTask() {
             console.log(this.task);
             if(this.task != '') {
-                let objectTask = { text: this.task, todo: false};
+                let objectTask = { text: this.task, done: false};
                 this.toDoList.unshift(objectTask);
                 console.log(this.toDoList);
             } else {

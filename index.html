@@ -19,8 +19,8 @@
 
         <div class="container d-flex justify-content-center align-items-center mt-4">
             <ol class="fw-medium" v-if="toDoList.length > 0">
-                <li v-for="(task, index) in toDoList">
-                    {{index + 1}} - {{task.text}}
+                <li :class="task.done == true ? 'todo' : '' " v-for="(task, index) in toDoList">
+                    {{index + 1}} - {{task.text}} - {{task.done}}
                     <button id="cross" class="bg-danger text-white border-0" @click="deleteTask(index)">&cross;</button>
                 </li>
             </ol>
