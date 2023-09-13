@@ -17,11 +17,11 @@
             <div>{{errorMessage}}</div>
         </div>
 
-        <div class="container">
+        <div class="container d-flex justify-content-center align-items-center mt-4">
             <ol v-if="toDoList.length > 0">
                 <li v-for="(task, index) in toDoList">
                     {{index}} - {{task.text}}
-                    <button @click="deleteTask(index)">&Cross;</button>
+                    <button id="cross" class="bg-danger text-white border-0 fs-4" @click="deleteTask(index)">&Cross;</button>
                 </li>    
             </ol>
         </div>

@@ -31,7 +31,8 @@ createApp({
                 {
                     text: 'Lavare la macchina',
                     todo: true
-                },{
+                },
+                {
                     text: 'Andare dal barbiere',
                     todo: true
                 },
@@ -41,14 +42,17 @@ createApp({
     },
     methods: {
         addTask() {
+            console.log(this.task);
             if(this.task != '') {
-                this.toDoList.unshift(this.task);
+                let objectTask = { text: this.task, todo: false};
+                this.toDoList.unshift(objectTask);
+                console.log(this.toDoList);
             } else {
                 this.errorMessage = 'Error something goes wrong'
             }
         },
-        deleteTask() {
-            this.toDoList.splice(index, deleteCount: 1);
+        deleteTask(index) {
+            this.toDoList.splice(index, 1);
         }
     }
 }).mount('#app')

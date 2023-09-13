@@ -11,6 +11,13 @@ input{
     width: 120px;
     height: 40px;
 }
+#cross{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50%;
+}
 .todo{
     text-decoration: line-through;
 }
