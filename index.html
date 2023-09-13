@@ -21,7 +21,7 @@
             <ol v-if="toDoList.length > 0">
                 <li v-for="(task, index) in toDoList">
                     {{index}} - {{task.text}}
-                    <button @click.stop="deleteTask(index)">&Cross;</button>
+                    <button @click="deleteTask(index)">&Cross;</button>
                 </li>    
             </ol>
         </div>
