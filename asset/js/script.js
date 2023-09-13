@@ -30,7 +30,7 @@ createApp({
                 },
                 {
                     text: 'Lavare la macchina',
-                    todo: true
+                    todo: false
                 },
                 {
                     text: 'Andare dal barbiere',
