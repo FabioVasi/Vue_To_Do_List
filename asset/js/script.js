@@ -29,5 +29,8 @@ createApp({
                 }
             ]
         }
+    },
+    methods: {
+        
     }
 }).mount('#app')
