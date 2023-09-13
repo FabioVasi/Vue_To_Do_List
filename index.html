@@ -18,11 +18,11 @@
         </div>
 
         <div class="container d-flex justify-content-center align-items-center mt-4">
-            <ol v-if="toDoList.length > 0">
+            <ol class="fw-medium" v-if="toDoList.length > 0">
                 <li v-for="(task, index) in toDoList">
-                    {{index}} - {{task.text}}
-                    <button id="cross" class="bg-danger text-white border-0 fs-4" @click="deleteTask(index)">&Cross;</button>
-                </li>    
+                    {{index + 1}} - {{task.text}}
+                    <button id="cross" class="bg-danger text-white border-0" @click="deleteTask(index)">&cross;</button>
+                </li>
             </ol>
         </div>
 
