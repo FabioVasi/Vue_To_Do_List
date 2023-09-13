@@ -22,15 +22,33 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            ToDoList: [
+            task: '',
+            toDoList: [
                 {
-                    text: '',
-                    done: ''
-                }
-            ]
+                    text: 'Fare la spesa',
+                    todo: true
+                },
+                {
+                    text: 'Lavare la macchina',
+                    todo: true
+                },{
+                    text: 'Andare dal barbiere',
+                    todo: true
+                },
+            ],
+            errorMessage: ''
         }
     },
     methods: {
-        
+        addTask() {
+            if(this.task != '') {
+                this.toDoList.unshift(this.task);
+            } else {
+                this.errorMessage = 'Error something goes wrong'
+            }
+        },
+        deleteTask() {
+            this.toDoList.splice(index, delete 1)
+        }
     }
 }).mount('#app')

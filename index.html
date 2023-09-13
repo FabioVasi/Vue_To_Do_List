@@ -12,8 +12,18 @@
     <div class="mt-4" id="app">
 
         <div class="container text-center">
-            <input class="rounded-3 border-1 me-2" type="text" placeholder="Type here your task..." required>
-            <button class="bg-primary rounded-3 text-white border-0 ms-2 fw-medium">Add Task's</button>
+            <input class="rounded-3 border-1 me-2" type="text" v-model="task" placeholder="Type here your task..." required>
+            <button id="add" class="bg-primary rounded-3 text-white border-0 ms-2 fw-medium" @click="addTask">Add Task</button>
+            <div>{{errorMessage}}</div>
+        </div>
+
+        <div class="container">
+            <ol v-if="toDoList.length > 0">
+                <li v-for="(task, index) in toDoList">
+                    {{index}} - {{task.text}}
+                    <button @click.stop="deleteTask(index)">&Cross;</button>
+                </li>    
+            </ol>
         </div>
 
     </div>
